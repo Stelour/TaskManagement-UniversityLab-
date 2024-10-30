@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: century gothic;
+}
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+.menu-container {
+    display: flex;
+    width: 100%;
+}
+.menu {
+    width: 350px;
+    background-color: #f0eeff75;
+    border-radius: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.menu-header {
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+.menu-header h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.menu-search input {
+    width: 100%;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.menu-section h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.menu-section ul {
+    list-style: none;
+}
+.menu-section ul li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 12px 0;
+}
+.menu-section ul li:hover {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+.task-count {
+    font-size: 12px;
+    background-color: #ddd;
+    border-radius: 50%;
+    padding: 4px 8px;
+}
+.list-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.work {
+    background-color: red;
+}
+.personal {
+    background-color: limegreen;
+}
+.study {
+    background-color: blue;
+}
+.menu-footer ul {
+    list-style: none;
+}
+.menu-footer ul li {
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.menu-footer ul li:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+.icon-upcoming:before {
+    content: "\27A1";
+    margin-right: 8px;
+}
+.icon-today:before {
+    content: "\1F4C5";
+    margin-right: 8px;
+}
+.icon-calendar:before {
+    content: "\1F4C6";
+    margin-right: 8px;
+}
+.icon-sticky-wall:before {
+    content: "\1F4DD";
+    margin-right: 8px;
+}
+.icon-settings:before {
+    content: "\2699";
+    margin-right: 8px;
+}
+.icon-sign-out:before {
+    content: "\21AA";
+    margin-right: 8px;
+}
+.icon-add:before {
+    content: "\2795";
+    margin-right: 8px;
+}
+.menu-section ul li span {
+    display: inline-block;
+    margin-left: 18px;
+    margin-right: 10px;
+}
