@@ -2,31 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: century gothic;
+    font-family: 'Century Gothic', sans-serif;
 }
 body {
+    background-color: #f8f9fa;
+}
+.container {
     display: flex;
     height: 100vh;
-    background-color: #f8f9fa;
 }
 .menu-container {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
 }
 .menu {
     width: 350px;
-    background-color: #f0eeff75;
+    background-color: rgba(240, 238, 255, 0.75);
     border-radius: 40px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin: 40px;
 }
-
 .menu-header {
     margin-bottom: 10px;
     text-align: center;
@@ -74,14 +73,8 @@ body {
     border-radius: 50%;
     margin-right: 10px;
 }
-.work {
-    background-color: red;
-}
 .personal {
     background-color: limegreen;
-}
-.study {
-    background-color: blue;
 }
 .menu-footer ul {
     list-style: none;
@@ -106,14 +99,6 @@ body {
     content: "\1F4C5";
     margin-right: 8px;
 }
-.icon-calendar:before {
-    content: "\1F4C6";
-    margin-right: 8px;
-}
-.icon-sticky-wall:before {
-    content: "\1F4DD";
-    margin-right: 8px;
-}
 .icon-settings:before {
     content: "\2699";
     margin-right: 8px;
@@ -130,4 +115,62 @@ body {
     display: inline-block;
     margin-left: 18px;
     margin-right: 10px;
+}
+
+/*==========================================================*/
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    margin: 40px 40px 40px 0;
+    background-color: rgba(231, 227, 255, 0.75);
+    border-radius: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main-content .intro-text {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.start-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(27, 53, 171);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.start-button:hover {
+    background-color: #200d6b;
+}
+
+/*==========================================================*/
+
+.menu-section ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 12px 0;
+    width: 100%;
+}
+.menu-section ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+.menu-section ul li.active a {
+    font-weight: bold;
+    color: limegreen;
+}
+.menu-section ul li a span {
+    margin-left: 0;
 }
