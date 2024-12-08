@@ -6,9 +6,11 @@
     <title>Task Management</title>
     <link rel="icon" type="image/png" href="icons/IconTitle.png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/upcoming.css">
 </head>
 <body>
     <div class="container">
+        <!-- Меню -->
         <div class="menu-container">
             <div class="menu">
                 <div class="menu-header">
@@ -17,7 +19,7 @@
                 <div class="menu-section tasks">
                     <h4>Tasks</h4>
                     <ul>
-                        <li><span class="icon-upcoming"></span> Upcoming <span class="task-count">0</span></li>
+                        <li class="active"><span class="icon-upcoming"></span> Upcoming <span class="task-count">0</span></li> <!-- Добавлен класс active -->
                         <li><span class="icon-today"></span> Today <span class="task-count">0</span></li>
                     </ul>
                 </div>
@@ -36,21 +38,51 @@
                 </div>
             </div>
         </div>
-        <div class="main-content">
-            <h1 class="page-title">Upcoming</h1>
-            <div class="sections">
-                <div class="section today">
-                    <h2>Сегодня</h2>
-                    <!-- Внутреннее содержимое пока не разрабатываем -->
-                </div>
-                <div class="section tomorrow">
-                    <h2>Завтра</h2>
-                    <!-- Внутреннее содержимое пока не разрабатываем -->
-                </div>
-                <div class="section this-week">
-                    <h2>На неделе</h2>
-                    <!-- Внутреннее содержимое пока не разрабатываем -->
-                </div>
+
+        <!-- Контент -->
+        <div class="content">
+            <h1 class="upcoming-header">Upcoming</h1>
+            
+            <!-- Раздел Today -->
+            <div class="task-section">
+                <h2>Today</h2>
+                <button class="add-task-btn">+ Add new task</button>
+                <ul class="task-list">
+                    <li>
+                        <label class="task-item">
+                            <input type="checkbox" class="task-checkbox"> 
+                            <span>Task 1</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Раздел Tomorrow -->
+            <div class="task-section">
+                <h2>Tomorrow</h2>
+                <button class="add-task-btn">+ Add new task</button>
+                <ul class="task-list">
+                    <li>
+                        <label class="task-item">
+                            <input type="checkbox" class="task-checkbox"> 
+                            <span>Task 2</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Раздел This Week -->
+            <div class="task-section">
+                <h2>This Week</h2>
+                <button class="add-task-btn">+ Add new task</button>
+                <ul class="task-list">
+                    <li>
+                        <label class="task-item">
+                            <input type="checkbox" class="task-checkbox"> 
+                            <span>Task 3</span>
+                        </label>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
