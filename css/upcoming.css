@@ -1,4 +1,4 @@
-/* Стиль для активной вкладки в меню */
+/* Стили для активных элементов меню */
 .menu-section ul li.active {
     background-color: rgb(65, 89, 193);
     color: white;
@@ -15,7 +15,7 @@
     color: white;
 }
 
-/* Основной контейнер для контента */
+/* Стили для контента */
 .content {
     flex: 1;
     padding: 40px;
@@ -23,8 +23,11 @@
     background-color: rgba(231, 227, 255, 0.75);
     border-radius: 40px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
+/* Заголовок секции */
 .upcoming-header {
     font-size: 36px;
     font-weight: bold;
@@ -32,46 +35,62 @@
     color: #333;
 }
 
-/* Секция задач */
+/* Секция задач (общие стили) */
 .task-section {
     margin-bottom: 30px;
-    padding: 20px;
+    padding: 50px;
     background-color: rgba(240, 238, 255, 0.75);
-    border-radius: 15px;
+    border-radius: 40px;
     border: 2px solid #ddd;
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    max-height: 600px;
 }
 
-/* Заголовок для каждой секции */
+/* Заголовок внутри секции задач */
 .task-section h2 {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 15px;
-    background-color: rgb(65, 89, 193);
-    color: white;
-    padding: 10px;
+    color: #333;
     border-radius: 10px;
-    display: inline-block;
-    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+/* Обертка для секций задач */
+.task-section-wrapper {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-grow: 1;
+    flex-direction: row;
+    height: 100%;
+    overflow: hidden;
 }
 
 /* Кнопка добавления задачи */
 .add-task-btn {
+    font-size: 16px;
     display: block;
     margin-top: 15px;
     padding: 10px;
     color: rgb(27, 53, 171);
     border: 2px solid rgba(27, 53, 171, 0.275);
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     background-color: transparent;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 .add-task-btn:hover {
     background-color: rgba(27, 53, 171, 0.1);
     color: #200d6b;
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 /* Список задач */
@@ -80,24 +99,20 @@
     padding: 5px;
 }
 
-/* Задачи с чекбоксами и барьером */
 .task-list li {
     padding: 10px;
     margin-bottom: 10px;
     border-bottom: 2px solid #787878;
-    border-radius: 0;
     cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
     display: flex;
     align-items: center;
 }
 
 .task-list li:hover {
-    background-color: #e9ecef;
     border-color: rgb(27, 53, 171);
 }
 
-/* Стилизация чекбоксов */
+/* Чекбокс задачи */
 .task-checkbox {
     appearance: none;
     background-color: #fff;
@@ -111,7 +126,6 @@
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Состояние чекбокса при его клике */
 .task-checkbox:checked {
     background-color: #007bff;
     border-color: #0056b3;
@@ -122,8 +136,15 @@
     color: gray;
 }
 
-.task-item:hover {
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+/* Секция задач Today, Tomorrow, This Week */
+.task-section.today {
+    flex: 0 1 50%;
+    text-align: center;
+}
+
+/* Секция задач (стили для всех) */
+.task-section-wrapper .task-section {
+    flex-grow: 1;
+    flex-shrink: 0;
+    overflow-y: auto;
 }

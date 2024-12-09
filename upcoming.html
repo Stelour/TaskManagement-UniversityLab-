@@ -19,7 +19,7 @@
                 <div class="menu-section tasks">
                     <h4>Tasks</h4>
                     <ul>
-                        <li class="active"><span class="icon-upcoming"></span> Upcoming <span class="task-count">0</span></li> <!-- Добавлен класс active -->
+                        <li class="active"><span class="icon-upcoming"></span> Upcoming <span class="task-count">0</span></li>
                         <li><span class="icon-today"></span> Today <span class="task-count">0</span></li>
                     </ul>
                 </div>
@@ -42,8 +42,6 @@
         <!-- Контент -->
         <div class="content">
             <h1 class="upcoming-header">Upcoming</h1>
-            
-            <!-- Раздел Today -->
             <div class="task-section">
                 <h2>Today</h2>
                 <button class="add-task-btn">+ Add new task</button>
@@ -56,33 +54,31 @@
                     </li>
                 </ul>
             </div>
-
-            <!-- Раздел Tomorrow -->
-            <div class="task-section">
-                <h2>Tomorrow</h2>
-                <button class="add-task-btn">+ Add new task</button>
-                <ul class="task-list">
-                    <li>
-                        <label class="task-item">
-                            <input type="checkbox" class="task-checkbox"> 
-                            <span>Task 2</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Раздел This Week -->
-            <div class="task-section">
-                <h2>This Week</h2>
-                <button class="add-task-btn">+ Add new task</button>
-                <ul class="task-list">
-                    <li>
-                        <label class="task-item">
-                            <input type="checkbox" class="task-checkbox"> 
-                            <span>Task 3</span>
-                        </label>
-                    </li>
-                </ul>
+            <div class="task-section-wrapper">
+                <div class="task-section">
+                    <h2>Tomorrow</h2>
+                    <button class="add-task-btn">+ Add new task</button>
+                    <ul class="task-list">
+                        <li>
+                            <label class="task-item">
+                                <input type="checkbox" class="task-checkbox"> 
+                                <span>Task 2</span>
+                            </label>
+                        </li>
+                    </ul>                
+                </div>
+                <div class="task-section">
+                    <h2>This Week</h2>
+                    <button class="add-task-btn">+ Add new task</button>
+                    <ul class="task-list">
+                        <li>
+                            <label class="task-item">
+                                <input type="checkbox" class="task-checkbox"> 
+                                <span>Task 3</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
