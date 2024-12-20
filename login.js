@@ -27,7 +27,13 @@ function validateForm() {
         return false;
     }
 
-    // перенаправление на index.html
-    window.location.href = "index.html";
-    return false;
+    // проверка - если данные введены правильно. показ прелоадера
+    document.getElementById('preloader').style.display = 'flex';
+
+    // задержка в 0.5 сек перед перенаправлением
+    setTimeout(function () {
+        window.location.href = "index.html";
+    }, 500);
+
+    return false; // предотвращаем отправку формы
 }
