@@ -21,7 +21,7 @@ function validateForm() {
     }
 
     // проверка на буквы и цифры
-    if (!/[A-Za-z]/.test(password) || !/\d/.test(password)) {
+    if (!/[A-Za-zА-Яа-я]/.test(password) || !/\d/.test(password)) {
         errorMessage.innerText = 'Пароль должен содержать хотя бы одну букву и одну цифру.';
         errorMessage.style.display = 'block';
         return false;
