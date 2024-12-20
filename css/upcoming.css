@@ -89,8 +89,9 @@
 
 .add-task-btn:hover {
     background-color: rgba(27, 53, 171, 0.1);
+    box-shadow: 0 4px 10px rgba(27, 53, 171, 0.3);
     color: #200d6b;
-    transform: scale(1.01);
+    transform: scale(1.02);
 }
 
 /* Список задач */
