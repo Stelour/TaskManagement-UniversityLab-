@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Task Management</title>
     <style>
         * {
             margin: 0;
@@ -66,26 +66,35 @@
             filter: brightness(70%);
             cursor: pointer;
         }
+        .input-field {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
     <div class="root-container">
         <div class="img-container"></div>
         <div class="preview-container">
-            <h1>Task Managment</h1>
+            <h1>Login to Task Management</h1>
+            <div id="error-message" class="error-message" style="display: none;"></div>
+            <form id="login-form" onsubmit="return validateForm()">
+                <input type="email" class="input-field" id="email" name="email" placeholder="Email" required />
+                <input type="password" class="input-field" id="password" name="password" placeholder="Password" required />
+                <button type="submit" class="cbutton">Login</button>
+            </form>
             <p>
-                Stay Organized, Get Things Done: Your <br />
-                Ultimate To-Do List App. A todo list app is a digital task
-                management tool designed to help users organize and
-                prioritize their daily activities and responsibilities.
-            </p>
-            <!-- Кнопка, которая перекидывает на index.html -->
-            <a href="index.html" class="cbutton">Get Started</a>
-            <p>
-                Already have an account?
-                <a href="login.html">Sign In</a>
+                Don't have an account?
+                <a href="signup.html">Sign Up</a>
             </p>
         </div>
     </div>
+
+    <script src="login.js"></script>
 </body>
+</html>
 </html>
