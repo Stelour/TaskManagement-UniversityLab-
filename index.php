@@ -137,7 +137,16 @@
 <body>
     <!-- Прелоадер -->
     <div id="preloader">
-        <div>Загрузка...</div>
+        <div>
+            <?php
+            // Проверяем, есть ли данные из формы
+            if (isset($_GET['email']) && !empty($_GET['email'])) {
+                echo "Загрузка... Добро пожаловать, " . htmlspecialchars($_GET['email']) . "!";
+            } else {
+                echo "Загрузка...";
+            }
+            ?>
+        </div>
     </div>
 
     <!-- Кнопка для смены темы -->
