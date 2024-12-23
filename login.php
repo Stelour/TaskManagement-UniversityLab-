@@ -132,6 +132,11 @@
             border-radius: 10px;
             border: 1px solid #ccc;
         }
+        .message {
+            color:rgb(163, 0, 223);
+            font-size: 16px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -149,10 +154,9 @@
         <div class="preview-container">
             <h1>Login to Task Management</h1>
             <div id="error-message" class="error-message" style="display: none;"></div>
-            <form id="login-form" novalidate>
-                <input type="text" class="input-field" id="email" name="email" placeholder="Email" required />
+            <form id="login-form" action="login.php" method="get" novalidate>
+                <input type="email" class="input-field" id="email" name="email" placeholder="Email" required />
                 <input type="password" class="input-field" id="password" name="password" placeholder="Password" required />
-                <div id="error-message" class="error-message" style="display: none; color: red;"></div>
                 <button type="submit" class="cbutton">Login</button>
             </form>
             
@@ -160,10 +164,19 @@
                 Don't have an account?
                 <a href="signup.html">Sign Up</a>
             </p>
+
+            <!-- Вывод сообщения с email -->
+            <div class="message">
+                <?php
+                if ($_GET["email"] != "") {
+                    echo "Здравствуйте, ваш email: ", ($_GET["email"]);
+                }
+                ?>
+            </div>
         </div>
     </div>
 
-    <script src="login.js"></script>
+    <!-- <script src="login.js"></script> -->
     <script src="theme.js"></script>
 </body>
 </html>
