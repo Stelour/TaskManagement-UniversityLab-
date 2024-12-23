@@ -1,3 +1,16 @@
+const form = document.getElementById('login-form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (validateForm()) {
+        document.getElementById('preloader').style.display = 'flex';
+
+        setTimeout(function () {
+            window.location.href = "welcome.html";
+        }, 1000);
+    }
+});
+
 function validateForm() {
     const errorMessage = document.getElementById('error-message');
     const email = document.getElementById('email').value.trim();
@@ -7,6 +20,11 @@ function validateForm() {
     errorMessage.style.display = 'none';
 
     // проверка email
+    if (!email) {
+        errorMessage.innerText = 'Пожалуйста, введите email.';
+        errorMessage.style.display = 'block';
+        return false;
+    }
     if (!email.includes('@')) {
         errorMessage.innerText = 'Email должен содержать символ "@".';
         errorMessage.style.display = 'block';
@@ -14,26 +32,23 @@ function validateForm() {
     }
 
     // проверка пароля
+    if (!password) {
+        errorMessage.innerText = 'Пожалуйста, введите пароль.';
+        errorMessage.style.display = 'block';
+        return false;
+    }
     if (password.length < 8) {
         errorMessage.innerText = 'Пароль должен содержать минимум 8 символов.';
         errorMessage.style.display = 'block';
         return false;
     }
 
-    // проверка на буквы и цифры
+    // проверка пароля на буквы и цифры
     if (!/[A-Za-zА-Яа-я]/.test(password) || !/\d/.test(password)) {
         errorMessage.innerText = 'Пароль должен содержать хотя бы одну букву и одну цифру.';
         errorMessage.style.display = 'block';
         return false;
     }
 
-    // проверка - если данные введены правильно. показ прелоадера
-    document.getElementById('preloader').style.display = 'flex';
-
-    // задержка в 0.5 сек перед перенаправлением
-    setTimeout(function () {
-        window.location.href = "welcome.html";
-    }, 500);
-
-    return false; // предотвращаем отправку формы
+    return true;
 }
